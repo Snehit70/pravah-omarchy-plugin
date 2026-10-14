@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "raja.pravah-todo",
+  "name": "Pravah Todo",
+  "version": "0.4.0",
+  "author": "Raja",
+  "license": "MIT",
+  "description": "A full front-end for the Pravah CLI: today, inbox, upcoming, and goals from the bar.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "widget/PravahTodo.qml"
+  },
+  "barWidget": {
+    "displayName": "Pravah Todo",
+    "description": "Plan and manage Pravah tasks without leaving the bar: capture, schedule, edit, goals, and undo.",
+    "category": "Productivity",
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "pollIntervalSec": 300,
+      "defaultTab": "today",
+      "showCompleted": "On",
+      "transport": "watch"
+    },
+    "schema": [
+      {
+        "key": "transport",
+        "type": "enum",
+        "label": "Read transport",
+        "options": ["cli", "watch"],
+        "defaultValue": "watch"
+      },
+      {
+        "key": "pollIntervalSec",
+        "type": "integer",
+        "label": "Poll interval (seconds)",
+        "min": 10,
+        "max": 600,
+        "step": 10,
+        "defaultValue": 300
+      },
+      {
+        "key": "defaultTab",
+        "type": "enum",
+        "label": "Tab opened on click",
+        "options": ["today", "inbox", "upcoming", "goals"],
+        "defaultValue": "today"
+      },
+      {
+        "key": "showCompleted",
+        "type": "enum",
+        "label": "Show completed tasks on Today",
+        "options": ["On", "Off"],
+        "defaultValue": "On"
+      }
+    ]
+  }
+}
