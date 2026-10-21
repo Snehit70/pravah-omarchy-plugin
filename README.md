@@ -34,8 +34,9 @@ fails.
 ## Requirements
 
 - Omarchy Quattro
-- Pravah CLI v2.4.0 or later, available on the shell's `PATH`. The `watch`
-  command used by the default transport shipped in v2.4.0.
+- Pravah CLI v2.5.5 or later, available on the shell's `PATH`. This version
+  supports sending task and goal text over stdin, keeping it out of process
+  arguments. The `watch` command used by the default transport shipped in v2.4.0.
 - An authenticated Pravah credential with `tasks:read`; task changes also need
   `tasks:write`.
 
